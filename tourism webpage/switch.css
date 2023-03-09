@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    transition: .5s ease;
+}
+
+body {
+    color : #fff;
+    padding-top:40px;
+    background: black;
+}
+
+
+.all .main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    color:#fff;
+}
+
+
+
+.all .main h3{
+    font-size: 30px;
+}
+
+.all .choose{
+    position:absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.all .choose .colors {
+    float: left;
+    padding: 7px;
+    background: #ffeb3b;    
+    width:273px;
+    
+    
+}
+
+.all .choose .colors ul li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 10px 5px;
+    cursor: pointer;    
+    background: green;
+    
+}
+
+
+.all .choose .themes-btn {
+  float: right ;
+  color: black;
+  background: #fff;
+  padding: 30px 30px 30px 30px;  
+  box-shadow:  3px 3px 0 -2px rgba(0,0,0,0.2);
+  font-weight: bold;
+  cursor: pointer;
+  height: 87px ;
+}
+
+.all .choose .themes-btn:hover{
+    box-shadow:  4px 4px 10px -3px rgba(0,0,0,0.56);
+  
+}
+
+
+.all .choose .colors .theme ul li:nth-child(1),
+.all .choose .colors .text ul li:nth-child(1) {
+  background: #1a1a1a;
+  color: #1c1b1b;
+}
+
+.all .choose .colors .theme ul li:nth-child(2),
+.all .choose .colors .text ul li:nth-child(2) {
+  background: white;
+  color: #fff;
+}
+
+.all .choose .colors .theme ul li:nth-child(3),
+.all .choose .colors .text ul li:nth-child(3) {
+  background: rgb(32, 32, 117);
+  color: rgb(32, 32, 117);
+}
+
+.all .choose .colors .theme ul li:nth-child(4),
+.all .choose .colors .text ul li:nth-child(4) {
+  background: rgb(167, 35, 11);
+  color: rgb(167, 35, 11);
+}
+
+.all .choose .colors .theme ul li:nth-child(5),
+.all .choose .colors .text ul li:nth-child(5) {
+  background: rgb(110, 74, 110);
+  color: rgb(110, 74, 110);
+}
+
+.all .choose .colors .theme ul li:nth-child(6),
+.all .choose .colors .text ul li:nth-child(6) {
+  background: rgb(75, 117, 11);
+  color: rgb(75, 117, 11)
+}
+
+
+
+
+
+
+
+
+.active {
+    transform: translate(-273px);
+}
+
+
+
+        body h3{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+            color: #d31b03;
+        }

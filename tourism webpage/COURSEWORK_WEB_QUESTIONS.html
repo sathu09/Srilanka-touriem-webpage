@@ -1,0 +1,182 @@
+]<DOCTYPE html!>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quiz Question</title>
+		<script src="QuizQuestions.js"></script>      <!--link javascript file-->
+		<script src="Question&Answer.js"></script>       <!--link javascript file-->
+		<link rel="stylesheet" type="text/css" href="QuizQuestions.css"></link>    <!--link external style sheet-->
+	</head>
+	
+	<body>
+		
+	
+		<!-- Navigation bar -->
+		<div class="header">
+			<nav >
+				<img src="Images/LOGO.jpg" class="Logo">
+				 
+				 <h1>The Ceylon Explorer</h1>
+				 
+				  
+				 <ul class="nav-links">
+					<li><a href="homepage.html"><b>Home</b></a></li>
+					<li ><a href="Gallery.html"><b>Gallery</b></a></li>
+					<li ><a href="buyproductnew.html"><b>Product</b></a></li> 
+					<li><a href="sitemap-diagram.html"><b>SiteMap</b></a></li>
+					<li class="G1"><a href="COURSEWORK_WEB_QUESTIONS.html"><b>Quiz</b></a></li>
+					<li><a href="Quaryfoam.html"><b>Query Form</b></a></li>
+					<li><a href="contactus.html"><b>Contact Us</b></a></li>
+				    </ul>
+
+			</nav>
+				
+		</div>
+		
+		<!--Begin-->
+		<div id="BeginBox" class="Box">
+			 <div id ="contentQuiz">
+			 <p>Quiz</p></div> 
+			 <div id="exe"><p>Are you excited to test your knowledge on Sri lankan Tourism...</p></div>
+			 <button id="Start" class="button" onClick="sound();startQuiz();setQuestion(questionNo);" align="center">Start Quiz</button>
+			 <div id ="content">
+			 Instructions:<br>
+			 <ul>
+				<li>Click the Start button</li><br>
+				<li>You are given 60 seconds to answer 10 questions</li><br>
+				<li>Answer the questions by clicking the correct answer</li><br>
+				<li>Each correct answer will Score +2 points</li><br>
+				<li>Each incorrect answer will deduct -1 from your Final score</li><br>
+				<li>You are allowed to skip the questions if you are not confident</li><br>
+				<li>Leaving a question will not make any change in your Final score</li><br>
+				<li>After passing all 10 questions you can check your progress by clicking Review </li><br>
+				<li>You are also allowed to retry the Quiz</li><br>
+				
+			 </ul>
+			 </p>
+			 </div>
+	    </div>    
+		
+		<!--QuizBox-->
+		<div id="QuizBox" class="Box" style="display:none">
+			<div class="head">
+				<div id="Time_count" class="button">01:00</div>
+			</div>
+		<div id="question" class="question"></div>
+
+		<label class="Answers"><input type="radio" name="option" value="1"/>
+		  A: <span id="Answer1"></span></label>
+
+		<label class="Answers"><input type="radio" name="option" value="2"/>
+		  B: <span id="Answer2"></span></label>
+
+		<label class="Answers"><input type="radio" name="option" value="3"/>
+		  C: <span id="Answer3"></span></label>
+
+		<label class="Answers"><input type="radio" name="option" value="4"/>
+		  D: <span id="Answer4"></span></label>
+		 
+
+		<button id="Next" class="button" onClick="nextQuestion()">Next</button>
+		</div>    
+		
+		<!--Outcome Box-->
+		<div id="OutcomeBox" class="Box" style="display:none">
+			<div class="head"></div>
+			<div id="AlertText" class="head"></div>
+			<button id="Summary" class="button" onClick="sound();reviewSummary()">Review</button>
+			<a href="COURSEWORK_WEB_QUESTIONS.html"><button id="Back" class="button" >Retry</button></a>
+	   </div>   
+	   
+	   <!--Summary Box-->
+		<div id="SummaryBox" class="Box" style="display:none">
+			<div  id="sum" class="head">
+			  <br> Quiz Summary <br><br>
+			</div>
+			<div id="QuestionsAndAnswers">
+			  <div id="Que1"></div>
+			  <div id="Que2"></div>
+			  <div id="Que3"></div>
+			  <div id="Que4"></div>
+			  <div id="Que5"></div>
+			  <div id="Que6"></div>
+			  <div id="Que7"></div>
+			  <div id="Que8"></div>
+			  <div id="Que9"></div>
+			  <div id="Que10"></div>
+			  <div id="TimeTaken"></div>
+			  <div id="Score"></div>
+			  <a href="COURSEWORK_WEB_QUESTIONS.html"><button id="Retry" class="button">Retry</button></a>
+			</div>
+		</div>
+		<!-- Footer -->
+			<footer class="footer">
+					<div class="row">
+						<div class="col">
+		
+							
+						</div>
+		
+						<div class="col">
+							<h3>office <div class="underline"><span></span></div></h3>
+							<p>N0. 47/B</p>
+							<p>Ramakrishna Road</p>
+							<p>Western Province, Colombo 6</p>
+							<p>PIN560066, Sri Lanka</p>
+							<p class="email-id">TheCeylonExplorer@gmail.com</p>
+							<h4>+94 - 413331520</h4>
+						</div>
+						<div class="col">
+							<h3>links<div class="underline"><span></span></div></h3>
+							<ul>
+								<li><a href="COURSEWORK_WEB_TEAMMEMBERS.html">Student details</a></li>
+								<li><a href="presentationpage.html">Presentation page</a></li>
+								<li><a href="homepage.html">Home</a></li>
+								<li><a href="contactus.html">Contact us</a></li>
+							    </ul>
+						</div>
+						<div class="col">
+							<h3>Newsletter<div class="underline"><span></span></div></h3>
+							<form>
+									<i class="far fa-envelope"></i>
+									<input type="email" placeholder="Enter your email ID" required>
+									<button type="submit"><i class="fas fa-arrow-right"></i></button>
+							</form>
+							<div class="social-icons">
+									<i class="fab fa-facebook-f"></i>
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-whatsapp"></i>
+									<i class="fab fa-pinterest"></i>
+		
+							</div>
+					</div>
+						  <hr>
+						 <p class="copyright">Ceylon Explorer 2021 - All Rights Reserved</p>
+			
+           </footer>
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		   <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>  
+				 
+		   <script>
+			   function goTOPE() {
+				   window.location.href=""
+			   }
+			   $(document).ready(function () {
+				   $('span').click(function () {
+					   $('.colors, span').toggleClass('active');
+				   });
+   
+
+				   $('ul.themes-colors li').click(function () {
+					   $('body').css('background', $(this).css('color'));
+				   });
+
+			   });
+   
+
+   
+   
+
+		   </script>
+	</body>
+</html>

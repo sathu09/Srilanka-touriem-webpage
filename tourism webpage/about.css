@@ -1,0 +1,170 @@
+@charset "utf-8";
+ *{
+        margin:0px;
+    }
+
+    
+    
+    #logo{
+        width:200px;
+        
+    }
+
+        /* style the navicationbar */ 
+    .list {
+        list-style-type: none;
+        padding-top: 40px;
+        
+    }
+
+    .li {
+        display: inline; 
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0; 
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        
+    }
+
+    li { 
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #969696;
+    }
+
+    
+.form{
+	margin: 50px;
+	display: block;
+	border: 1px solid red;
+	position: relative;
+	box-shadow: 0 0px 25px 0px red;
+	border-radius: 4px;
+	height: 375px;
+}
+   body {
+  background-image: url("bg.jpg");
+	  background-size: 100%;
+}
+
+   /* style the footer */
+
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position:fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+td{
+	width: 150px;
+	padding: 5px;
+}
+
+table{
+	font-size: 22px;
+	padding: 10px 20px 20px 0;
+	color: aliceblue;
+	margin-left: 50px;
+
+ 
+}
+input{
+	
+	width: 372px;
+}
+.left {
+  margin-top: 45px;
+  left: 0;
+ 
+}
+
+.right {
+  margin-top: 210px;
+  right: 0;
+ 
+}
+.contactus{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 25px;
+}
+.centered {
+  position:relative;
+  left: 50%;
+	color:aliceblue;
+  transform: translate(-50%, -50%);
+  text-align: center;
+	
+	animation-name: abouthead;
+  	animation-duration: 4s ;
+	animation-iteration-count:infinite;
+	text-align: center;
+}
+
+.submit{
+  background-color:gray; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px 0 470px;
+  cursor: pointer;
+}
+.submit:hover{
+  background-color:darkcyan; /* Green */
+  
+}
+.abouttext{
+	border: 1px solid red;
+	box-shadow: 0 0px 25px 0px red;
+	border-radius: 4px;
+	background-color:;
+	margin-top: 10PX;
+	position: fixed;
+	padding: 0 20px;
+	text-align: justify;
+	width: 700PX;
+	margin-left: 400px;
+	padding-bottom: 10px;
+}
+.aboutus{
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+}
+.aboutimg{
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  width: 500px;
+  display: inline-block;
+  margin-left: 500px;
+  margin-right: auto;
+  box-shadow: 0 0px 25px 0px red;
+  margin: 50px;
+  margin-top: 220px;
+}
+.abouthead{
+	font-size: 40px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}

@@ -1,0 +1,40 @@
+.con-1{
+        color: rgb(255, 255, 255);
+        text-align: center;
+}
+.call1{
+        width: 130px;
+        height: 100px;
+        margin-left: 200px;
+        padding-left: 30px;       
+}
+.call2{
+        width: 30px;
+        margin: 100px;
+}
+.call3{
+        width: 30px;
+        height: 20px;    
+}
+.des-1{
+        width: 450px;
+        padding-left: 100px;
+}
+.map{
+        padding-left: 150px;
+}
+section{
+        width: 600px;
+}
+aside{
+        width: 300px;
+} 
+.float-left{
+        float: left;
+        margin-top: 150px;
+}
+.float-right{
+        float: right;
+        margin-top: 150px;
+        margin-right: 150px;
+}

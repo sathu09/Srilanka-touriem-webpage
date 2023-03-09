@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quary foam</title>
+    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap">
+    <link rel="stylesheet" href="stylex.css">
+    <style>
+                
+    
+        .con-1{
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+        
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            padding-left: 30px;
+            padding-top: 20px;
+        }
+        .button{
+            display: none;
+            font-size: 20px;
+            border: none;
+            background-color: #3b4d61;
+            color: rgb(245, 243, 243);
+            padding: 15px;
+            border-radius: 5px;
+        }
+        script{
+            display: none;
+        }
+        .scroll-1{
+            /* padding: auto; */
+            font-size: 15px;
+            color: white;
+            background-color: rgba(131, 42, 42, 0.8);
+            /* padding-top: 50px; */
+        }
+        .scroll-2{
+            display: none;
+            position: fixed;
+            bottom: 15px;
+            right: 20px;
+            font-size: 20px;
+            border: none;
+            background-color: #f8f0f0;
+            color: rgb(14, 13, 13);
+            padding: 15px;
+            border-radius: 5px;
+            
+        }
+        .txt{
+            color: black;
+            background-color: rgb(236, 226, 226);
+            width: 200px;
+        }
+        .txt-2{
+            width: 700px;
+        }
+        .pageEditor{
+            color: rgb(5, 5, 5);
+            font-weight: bold;
+        }
+        </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="Images/LOGO.jpg" class="Logo">
+             
+             <h1>The Ceylon Explorer</h1>
+             
+              
+             <ul class="nav-links">
+                <li><a href="homepage.html"><b>Home</b></a></li>
+                <li><a href="Gallery.html"><b>Gallery</b></a></li>
+                <li><a href="buyproductnew.htm"><b>Product</b></a></li>
+                <li><a href="sitemap-diagram.html"><b>SiteMap</b></a></li>
+                <li><a href="COURSEWORK_WEB_QUESTIONS.html"><b>Quiz</b></a></li>
+                <li><a href="Quaryfoam.html"  class="G1"><b>Query Form</b></a></li>
+                <li><a href="contactus.html"><b>Contact Us</b></a></li>
+             </ul>
+
+        </nav>
+    </div>
+    
+    
+    
+    <h2>If you have any complains please fill this below quary </h2>
+    <form action="" name="query" class="con-1">
+
+        <p id="form">
+            <label for="name">Name of the guest </label> <input type="text" name='name' id="name" class="txt">
+            <br><br>
+            <label for="email">Email adress</label> <input type="text" name='email' id="email" class="txt">
+            <br><br>
+            <label>Type of  the guest quary</label>
+
+            <select name="delievery" onchange="countryList() " id="subject" name="subject">
+                <option value="Personal issue">Personal issue</option>
+                <option value="Relates to country">Related to country</option>
+                <option value="Travelling" selected>Travelling</option>
+                <option value="Other" selected>Other</option>
+            </select>
+            <br><br>
+            <label for="details">Type  your selected quary here.....</label>
+            <br><br>
+            <textarea name="" id="detail" cols="100" rows="10" class="txt txt-2"></textarea>
+
+            <button type="button" style="display:block;" class="button button-2" id="btn1"
+                onclick="validation(query)">View Query</button>
+
+        </p>
+
+        <div id="set" style="display: none;">
+            <fieldset>
+                <p id="confirm"></p>
+                <button type="button" class="button" id="btn2" onclick="edit()">Edit</button>
+                <button type="button" class="button" id="btn3" onclick="send()">Send</button>
+            </fieldset>
+
+        </div>
+        <br><br>
+        <div class="scroll-1">
+            <a href="page-editer.html" class="pageEditor footer-2">Page Editor</a>
+            <button onclick="topfunction()" id="top" style="display: none;" class="scroll-2"> Scroll Top !</button>
+        </div>
+    </form>
+
+    <script>
+        function validation() {
+            var valid1 = document.query.name.value;
+            var valid2 = document.query.email.value;
+            var valid3 = document.query.subject.value;
+            var valid4 = document.getElementById("detail").value;
+
+            if (valid1 == "" && valid2 == "" && valid3 == "" && valid4 == "") {
+                alert("Name, email address, query subject and query details fields are missing");
+            } else if (valid2 == "" && valid3 == "" && valid4 == "") {
+                alert("email address, query subject and query details fields are missing");
+            } else if (valid1 == "" && valid3 == "" && valid4 == "") {
+                alert("Name, query subject and query details fields are missing");
+            } else if (valid3 == "" && valid4 == "") {
+                alert("query subject and query details fields are missing");
+            } else if (valid1 == "" && valid2 == "" && valid4 == "") {
+                alert("Name, email address and query details fields are missing");
+            } else if (valid1 == "" && valid2 == "" && valid3 == "") {
+                alert("Name, email addres and query subject fields are missing");
+            } else if (valid2 == "" && valid4 == "") {
+                alert("Email addres and query details fields are missing");
+            } else if (valid2 == "" && valid3 == "") {
+                alert("Email addres and query subject fields are missing");
+            } else if (valid1 == "" && valid2 == "") {
+                alert("Name and email addres  fields are missing");
+            } else if (valid1 == "" && valid3 == "") {
+                alert("Name and query subject fields are missing");
+            } else if (valid1 == "" && valid4 == "") {
+                alert("Name and query details fields are missing");
+            } else if (valid1 == "") {
+                alert("Name fields is missing");
+            } else if (valid2 == "") {
+                alert("Email addres fields is missing");
+            } else if (valid3 == "") {
+                alert("query subject fields is missing");
+            } else if (valid4 == "") {
+                alert("query details fields is missing");
+            } else {
+                document.getElementById("set").style.display = "block";
+                document.getElementById("form").style.display = "none";
+                document.getElementById("confirm").innerHTML = "Name : " + valid1 + "<br>Email : " + valid2 + "<br>Subject : " + valid3 + "<br>Details : " + valid4;
+                document.getElementById("btn2").style.display = "inline";
+                document.getElementById("btn3").style.display = "inline";
+            }
+        }
+
+        function edit() {
+            document.getElementById("confirm").innerHTML = "";
+            document.getElementById("btn2").style.display = "none";
+            document.getElementById("btn3").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("set").style.display = "none";
+
+        }
+
+
+        function send() {
+            var details = document.forms[0].elements;
+            var info = "Name : " + details.name.value + "<br>Email : " + details.email.value + "<br>Subject : " + details.subject.value + "<br>Details : " + details.detail.value;
+
+            document.forms[0].action = 'mailto:sathursh.20210092@iit.ac.lk?&body=' + info;
+            document.forms[0].submit();
+
+            document.getElementById("confirm").innerHTML = "Email sent";
+            document.getElementById("btn2").style.display = "none";
+            document.getElementById("btn3").style.display = "none";
+        }
+
+
+        var button = document.getElementById("top");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+    <footer>
+        <div class="row">
+            <div class="col">
+
+
+            </div>
+
+            <div class="col">
+                <h3>office <div class="underline"><span></span></div>
+                </h3>
+                <p>N0. 47/B</p>
+                <p>Ramakrishna Road</p>
+                <p>Western Province, Colombo 6</p>
+                <p>PIN560066, Sri Lanka</p>
+                <p class="email-id">TheCeylonExplorer@gmail.com</p>
+                <h4>+94 - 413331520</h4>
+            </div>
+            <div class="col">
+                <h3>links<div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="COURSEWORK_WEB_TEAMMEMBERS.html">Student details</a></li>
+                    <li><a href="presentationpage.html">Presentation page</a></li>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter<div class="underline"><span></span></div>
+                </h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email ID" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-pinterest"></i>
+
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Ceylon Explorer 2021 - All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
